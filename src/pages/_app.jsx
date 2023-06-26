@@ -12,28 +12,12 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Netreap</title>
+        <title>Framework Changelog</title>
         <meta
           name="description"
-          content="Netreap is a tool to run Cilium with a Nomad cluster."
+          content="See what's new in Framework, the best way to build your dreams."
         />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
+        <link rel="icon" type="image/ico" href="/favicon.ico" />
       </Head>
       <ThemeProvider attribute="class" disableTransitionOnChange>
         <MDXProvider components={mdxComponents}>
