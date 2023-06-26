@@ -1,0 +1,44 @@
+import { SparkleIcon } from "@/components/SparkleIcon";
+import { generateRssFeed } from "@/lib/generateRssFeed";
+import { HiOutlineCog, HiOutlineExclamation } from "react-icons/hi";
+
+export async function getStaticProps() {
+  if (process.env.NODE_ENV === "production") {
+    await generateRssFeed();
+  }
+  return { props: {} };
+}
+
+---
+
+![](@/images/initial.png)
+
+## Framework v0.7.4 {{  date: "2023-06-25T00:00Z" }}
+
+Framework v0.7.4 is a minor release that includes various new features, changes, and bug fixes.
+
+### <SparkleIcon /> New Features
+
+- **Bits** - Bits are a new currency that can be used to purchase items on the platform. Bits will be replacing daily prizes, and you will receive bits for daily logins.
+- **Domains** - Verify and utilize your own domain for our soon-to-be-released Wiki and Status software-as-a-service products.
+- **Chat notifications** - Hear a sound when you receive a new message in chat.
+- **Delete messages** - Delete your own messages in a conversation.
+- **Transaction date sort** - Sort transactions by specific date ranges.
+- **Chat bubble colors** - Change the color of your chat bubbles.
+- **Link safety** - You'll be prompted when clicking on external links to verify intent.
+- **Verification** - Verified users will have a blue checkmark next to their name to indicate authenticity.
+
+### <HiOutlineCog /> Changes
+
+- **Client download platforms** - Updated client download platforms to include comprehensive Linux support.
+- **Chat rate limits** - Increased chat rate limits to allow for more messages to be sent in a shorter period of time.
+- **Navigation icons** - Updated navigation icons to be more consistent.
+
+### <HiOutlineExclamation /> Fixes
+
+- **Underlying chat infrastructure** - We've made some changes to the underlying chat infrastructure to improve performance and reliability.
+- **OAuth search** - Fixed an issue preventing users from searching for OAuth applications.
+- **Truncation in chat flyout** - Fixed an issue where long messages would be incorrectly truncated in the chat flyout.
+- **Deleting sessions on lock** - Fixed an issue where sessions would be deleted when locking your account. This was not intended behavior.
+
+We hope you enjoy this release. Next update is scheduled for **June 30th, 2023**. [See full release log](https://invent.solarius.me/Soodam.re/framework/-/releases/0.7.4).
