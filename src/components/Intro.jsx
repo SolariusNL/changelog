@@ -24,10 +24,10 @@ export function Intro() {
         </span>
       </h1>
       <p className="mt-4 text-sm/6 text-gray-200">
-        Framework is a modern, free and open source game platform alternative to
-        Roblox, with power comparable to Unity or Unreal Engine. It is designed
-        to be easy to use, and to allow for rapid development of games, worlds
-        and experiences to share with the world.
+        Framework is a modern, free and open source game platform, comparable to
+        the likes of Roblox. Powered by our home-grown engine, Vortex, it
+        provides a beautiful and intuitive interface for building your dream
+        games.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink

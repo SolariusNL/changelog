@@ -1,7 +1,6 @@
 import { SparkleIcon } from "@/components/SparkleIcon";
 import { generateRssFeed } from "@/lib/generateRssFeed";
 import { HiOutlineCog, HiOutlineExclamation } from "react-icons/hi";
-
 export async function getStaticProps() {
   if (process.env.NODE_ENV === "production") {
     await generateRssFeed();
@@ -10,6 +9,48 @@ export async function getStaticProps() {
 }
 
 ---
+
+![](@/images/0.10.0.png)
+
+## Framework v0.10.0 {{  date: "2024-01-25T00:00Z" }}
+
+Framework v0.10.0 is a major release that adds new features, changes, and bug fixes. Framework has also been incremented to alpha status.
+
+### <SparkleIcon /> New Features
+
+- **Sound identification** - We've added a sound identification system that'll automatically identify sounds uploaded to the platform. This is for our new copyright enforcement policy.
+- **Add new TOTP login flow** - We've made it easier to login with TOTP by building a new login flow.
+- **New Solarius branding** - Solarius has undergone a rebranding to better reflect our vision and mission.
+- **Add Redis servers** - We've added a Redis management system to the platform to give you more freedom over creations on Framework.
+- **New landing page** - The landing page has been overhauled for a better user experience and to reflect our mission even better.
+- **Region blocking** - Framework now supports region blocking for administrators and self-service.
+- **Location details** - Framework now supports location details for administrators and self-service.
+- **License keys** - Soon, Framework will become a paid product (for business customers). We've added license key support to the platform to prepare for this.
+- **Protected users** - We've added a new protected user system to Framework to protect users from abuse.
+- **Badges** - Framework now has a badge system for users to showcase their achievements and contributions to the platform.
+- **Decals** - Users can now upload and manage decals on Framework.
+- **SSO (Single Sign-On)** - Framework now supports SSO for administrators.
+- **Punishment evidence** - Staff can now add evidence to punishments to confirm their validity, and to provide context.
+- **Home redesign** - We've redesigned the home page to be more consistent with the rest of the platform, and to be more informative.
+
+### <HiOutlineCog /> Changes
+
+- **New launching prompt** - We've added a new launching prompt to be compliant with our new design standards.
+- **Game view updates** - We've updated the game view to be faster, and to match our new design standards.
+
+### <HiOutlineExclamation /> Fixes
+
+- We fixed an issue that would show team funds (even when they're private) in the `getServerSideProps` response on team pages.
+- We fixed a race condition with sound license identification.
+- Originally, profile links didn't validate that the input included a valid URI scheme. This has been fixed.
+- Fixed Dicebear avatars not being generated correctly.
+- Fix impersonation banners on light theme.
+- Seen notifications are no longer displayed in the administration interface.
+- Fixed the country list having incorrect country codes.
+- Fix an exploit that allowed users to provide negative values as Ticket amounts, resulting in their balance being increased.
+- Fixed an issue that prevented OAuth2 applications from being deleted when there are still active tokens.
+
+We hope you enjoy this release. You can [view the full release log here](https://github.com/SolariusNL/framework/releases/tag/0.10.0). Thank you for using Framework!
 
 ![](@/images/opengraph.png)
 
